@@ -13,12 +13,13 @@ namespace Calendar.Providers
 
         /// <summary>
         /// Creates a new instance of Repetition based on passed <paramref name="period"/>
+        /// Initialize sub properties if needed
         /// </summary>
         /// <param name="period">   The period. </param>
         /// <returns>
         /// New instance of repetition.
         /// </returns>
-        public Repetition Create(RepetitionPeriod period)
+        public Repetition CreateAndInit(RepetitionPeriod period)
         {
             switch (period)
             {

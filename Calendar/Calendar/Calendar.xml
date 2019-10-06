@@ -42,9 +42,10 @@
             and event ends at date defined by <see cref="P:Calendar.Models.Event.EndDate"/> and time defined as 23:59:59
             </summary>
         </member>
-        <member name="M:Calendar.Providers.RepetitionFactory.Create(Calendar.Models.Repetitions.RepetitionPeriod)">
+        <member name="M:Calendar.Providers.RepetitionFactory.CreateAndInit(Calendar.Models.Repetitions.RepetitionPeriod)">
             <summary>
             Creates a new instance of Repetition based on passed <paramref name="period"/>
+            Initialize sub properties if needed
             </summary>
             <param name="period">   The period. </param>
             <returns>

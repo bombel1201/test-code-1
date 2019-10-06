@@ -14,7 +14,7 @@ namespace CalendarTests
         {
             var repetition = new Mock<Repetition>((uint)1, RepetitionPeriod.None);
             var repetitionFactory = Mock.Of<IRepetitionFactory>(
-                x => x.Create(RepetitionPeriod.None) == repetition.Object);
+                x => x.CreateAndInit(RepetitionPeriod.None) == repetition.Object);
             var factory = new EventsFactory(repetitionFactory);
 
             var actual = factory.CreateSingleEvent();

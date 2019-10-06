@@ -37,7 +37,7 @@ namespace Calendar.Controllers
         [Route("[action]")]
         public ActionResult<Repetition> CreateRepetition([FromQuery] RepetitionPeriod period)
         {
-            return repetitionFactory.Create(period);
+            return repetitionFactory.CreateAndInit(period);
         }
 
         [HttpPost]

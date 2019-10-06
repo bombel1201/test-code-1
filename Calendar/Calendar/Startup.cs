@@ -1,4 +1,5 @@
-﻿using Calendar.Providers;
+﻿using Calendar.Models.Repetitions;
+using Calendar.Providers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,10 @@ namespace Calendar
             services.AddScoped<IWeekDaysFactory, WeekDaysFactory>();
             services.AddScoped<IRepetitionFactory, RepetitionFactory>();
             services.AddScoped<IEventsFactory, EventsFactory>();
+
+            services.AddMvc().AddJsonOptions(
+                options => options.SerializerSettings.Converters.Add(new RepetitionJsonConverter())
+                );
 
             services.AddSwaggerGen(options =>
             {

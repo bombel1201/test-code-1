@@ -4,6 +4,6 @@ namespace Calendar.Providers
 {
     public interface IRepetitionFactory
     {
-        Repetition Create(RepetitionPeriod period);
+        Repetition CreateAndInit(RepetitionPeriod period);
     }
 }

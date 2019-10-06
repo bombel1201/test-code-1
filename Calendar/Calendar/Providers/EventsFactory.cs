@@ -16,7 +16,7 @@ namespace Calendar.Providers
         {
             var result = new Event
             {
-                Repetition = repetitionFactory.Create(RepetitionPeriod.None)
+                Repetition = repetitionFactory.CreateAndInit(RepetitionPeriod.None)
             };
             return result;
         }
