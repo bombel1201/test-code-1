@@ -6,3 +6,5 @@
 /.vs/test-code-1/v16
 /Calendar/Calendar/bin/Debug/netcoreapp2.1
 /Calendar/Calendar/obj
+/Calendar/CalendarTests/bin/Debug/netcoreapp2.1
+/Calendar/CalendarTests/obj
