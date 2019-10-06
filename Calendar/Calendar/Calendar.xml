@@ -4,5 +4,61 @@
         <name>Calendar</name>
     </assembly>
     <members>
+        <member name="T:Calendar.Models.Event">
+            <summary>
+            Class which represents event scheduled in calendar
+            </summary>
+        </member>
+        <member name="P:Calendar.Models.Event.Description">
+            <summary>
+            The description of the event
+            </summary>
+        </member>
+        <member name="P:Calendar.Models.Event.EndDate">
+            <summary>
+            The end date of the event
+            </summary>
+        </member>
+        <member name="P:Calendar.Models.Event.Identifier">
+            <summary>
+            Identifier of the event
+            </summary>
+        </member>
+        <member name="P:Calendar.Models.Event.StartDate">
+            <summary>
+            The start date of the event
+            </summary>
+        </member>
+        <member name="P:Calendar.Models.Event.Title">
+            <summary>
+            The title of the event
+            </summary>
+        </member>
+        <member name="P:Calendar.Models.Event.WholeDay">
+            <summary>
+            Gets or sets a value indicating whether the event is valid for whole day.
+            If <see cref="P:Calendar.Models.Event.WholeDay"/> is equal to true then 
+            period defined for this event starts at date defined by <see cref="P:Calendar.Models.Event.StartDate"/> and time defined as 00:00:00
+            and event ends at date defined by <see cref="P:Calendar.Models.Event.EndDate"/> and time defined as 23:59:59
+            </summary>
+        </member>
+        <member name="M:Calendar.Providers.RepetitionFactory.Create(Calendar.Models.Repetitions.RepetitionPeriod)">
+            <summary>
+            Creates a new instance of Repetition based on passed <paramref name="period"/>
+            </summary>
+            <param name="period">   The period. </param>
+            <returns>
+            New instance of repetition.
+            </returns>
+        </member>
+        <member name="M:Calendar.Providers.WeekDaysFactory.CreateInitialListOfWeekDays(System.Boolean)">
+            <summary>
+            Creates initial list of selectable week days.
+            </summary>
+            <param name="todaySelected">    True if actual day must be selected. </param>
+            <returns>
+            The new initial list of week days.
+            </returns>
+        </member>
     </members>
 </doc>
