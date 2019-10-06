@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Calendar.Providers;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +27,9 @@ namespace Calendar
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<IWeekDaysFactory, WeekDaysFactory>();
+            services.AddScoped<IRepetitionFactory, RepetitionFactory>();
+            services.AddScoped<IEventsFactory, EventsFactory>();
 
             services.AddSwaggerGen(options =>
             {
